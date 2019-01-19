@@ -9,7 +9,7 @@ module Dbpedia
 
     def parse
       self.tap do |obj|
-        obj.label = read '> RefCount'
+        obj.refcount = read '> RefCount'
         obj.label = read '> Label'
         obj.uri = read '> URI'
         obj.description = read '> Description'
